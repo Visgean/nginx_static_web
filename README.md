@@ -69,7 +69,7 @@ sudo apt-get install nginx
 
 You need to replace all ``example.com`` with your own value and ``/var/www/example`` with the actual directory
 
-```
+```nginx
 # UPDATED 17 February 2019
 # see https://gist.github.com/nrollr/9a39bb636a820fb97eec2ed85e473d38
 # and https://github.com/Visgean/nginx_static_web
@@ -178,9 +178,9 @@ Now run this command, *it will most likely fail to identify your domains* so you
 sudo certbot --nginx certonly
 ```
 
-# Using rsync to publish your website 
+# Use rsync to publish your website 
 
-Use rsync to update the website, it is faster then SFTP because it only transmits the changed items
+Rsync is faster than SFTP because it only transmits the changed items
 
 ```
 rsync -azP <build_dir on your laptop> <digital ocean ssh serve details>:/var/www/<mysite>
